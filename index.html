@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lexer</title>
+</head>
+<style>
+    html, body {
+        height: 100%;
+    }
+    table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    td, th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+    }
+    .common-wrapper {
+        width: 600px;
+        margin: 0 auto;
+    }
+    tr:nth-child(even) {
+        background-color: #dddddd;
+    }
+    .common-wrapper, .textarea-wrapper {
+        display: flex;
+    }
+
+    .textarea-wrapper {
+        display: flex;
+        margin-left: auto;
+        flex-direction: column;
+    }
+    .table-container {
+        max-height: 500px;
+        overflow: scroll;
+    }
+</style>
+<body>
+<input type="file" id="myFile">
+<hr>
+<div class="common-wrapper">
+<div class="textarea-wrapper" style="margin-left: 0;margin-right: 20px">
+    <span>Входной код</span>
+    <textarea readonly style="width:300px;height: 200px" id="input-code"></textarea>
+    <span>Строки с ошибками</span>
+    <textarea readonly style="width:300px;height: 200px" id="errors"></textarea>
+</div>
+<div class="textarea-wrapper">
+    <span>Таблица лексем</span>
+    <div class="table-container">
+        <table id="lex-table">
+            <tbody>
+            <tr>
+                <th>№</th>
+                <th>Лексема</th>
+                <th>Тип лексемы</th>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+</div>
+<div style="display: flex;
+    justify-content: space-between;
+    align-items: baseline;">
+    <div id="log" style="text-align: left;"></div>
+    <div id="simple-log" style="text-align: right;"></div>
+</div>
+<script src="./Lexer.js"></script>
+<script src="./flex_script.js"></script>
+<script src="./fileReader.js"></script>
+</body>
+</html>

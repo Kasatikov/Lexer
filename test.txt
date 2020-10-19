@@ -1,0 +1,8 @@
+A := 4;
+B := 8;
+do B while (B);
+TEST := B;
+_Y = 67}
+YU := X;
+C:= YU;
+A := FB;
